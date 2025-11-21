@@ -1,0 +1,13 @@
+package com.zyk.cbcrs;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class CbcrsApplication {
+
+    public static void main(String[] args) {
+        SpringApplication.run(CbcrsApplication.class, args);
+    }
+
+}
