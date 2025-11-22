@@ -9,8 +9,25 @@ import java.util.List;
 
 @Service
 public interface ReservationService {
-    ReservationVO createReservation(ReservationDTO reservationDTO);
-    boolean cancelReservation(Long id);
-    List<ReservationVO> getReservations(ReservationQueryDTO queryDTO);
-    ReservationVO getReservationById(Long id);
+
+    /**
+     * 创建预约
+     * @param reservationDTO
+     * @return
+     */
+    boolean createReservation(ReservationDTO reservationDTO);
+
+    /**
+     * 取消预约
+     * @param reservationId
+     * @return
+     */
+    boolean cancelReservation(String reservationId);
+
+    /**
+     * 获取用户的预约列表
+     * @param queryDTO
+     * @return
+     */
+    List<ReservationVO> getUserReservations(ReservationQueryDTO queryDTO);
 }

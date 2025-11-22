@@ -17,6 +17,7 @@ public class AuthController {
     @Autowired
     private UserService userService;
 
+
     @PostMapping("/login")
     public Result login(@RequestBody LoginDTO loginDTO) {
         UserVO userVO = userService.login(loginDTO);
@@ -27,6 +28,5 @@ public class AuthController {
     public Result register(@RequestBody RegisterDTO registerDTO) {
         UserVO userVO = userService.register(registerDTO);
         return Result.success("注册成功", userVO);
-
     }
 }
